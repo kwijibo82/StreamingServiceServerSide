@@ -1,0 +1,65 @@
+<html lang="en" >
+
+
+
+<head>
+            <meta charset="utf-8" />
+   	        <title>Subida de archivos</title>
+    	        <link href="css/uploadForm.css" rel="stylesheet" type="text/css" />
+    	        <script src="JavaScript/uploadForm.js"></script>
+    	    </head>
+	    <body>
+        <header>
+    	            <h2>Subida de archivos</h2>
+        </header>
+        </head>
+
+
+        <div class="container">
+    	            <div class="contr"><h2>Selecciona una archivo multimedia y pulsa el boton Subir archivos.</h2></div>
+
+                <div class="upload_form_cont">
+    	                <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadForm.php">
+                        <div>
+    	                        <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();" /></div>
+                        </div>
+    	                    <div>
+    	                        <input type="button" value="Subir archivos" onclick="startUploading()" />
+    	                    </div>
+    	                    <div id="fileinfo">
+    	                        <div id="filename"></div>
+    	                        <div id="filesize"></div>
+    	                        <div id="filetype"></div>
+    	                        <div id="filedim"></div>
+    	                    </div>
+    	                    <div id="error">El formato de archivo seleccionado no es correcto.</div>
+    	                    <div id="error2">Ocurriço un error mientras se subía el archivo.</div>
+    	                    <div id="abort">La subida fue cancelada por el usuario p el navegador rechazó la conexión.</div>
+    	                    <div id="warnsize">EL tamaño del archivo es demasiado grande, por favor selecciona uno más pequeño.</div>
+
+    	                    <div id="progress_info">
+    	                        <div id="progress"></div>
+    	                        <div id="progress_percent">&nbsp;</div>
+    	                        <div class="clear_both"></div>
+    	                        <div>
+    	                            <div id="speed">&nbsp;</div>
+    	                            <div id="remaining">&nbsp;</div>
+    	                            <div id="b_transfered">&nbsp;</div>
+    	                            <div class="clear_both"></div>
+    	                        </div>
+    	                        <div id="upload_response"></div>
+    	                    </div>
+    	                </form>
+                        <form id="close_form" enctype="multipart/form-data" method="post" action="closeSession.php">
+
+                            <input type="button" value="Close sessio">
+
+                        </form>
+
+    	                <img id="preview" />
+    	            </div>
+    	        </div>
+	    </body>
+	</html>
+
+
